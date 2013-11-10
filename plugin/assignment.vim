@@ -35,7 +35,8 @@ set cpo&vim
 let g:assignment#path = get(g:, 'assignment#path', '')
 if empty(g:assignment#path)
   call assignment#message#error('Please set g:assignment#path to assignment root path')
-  finish
+  command! -nargs=1 -complete=dir
+        \ AssignmentInit call assignment#initialize#setup(<q-args>)
 endif
 
 command! -nargs=+ -complete=customlist,assignment#complete

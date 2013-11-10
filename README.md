@@ -10,7 +10,12 @@
 
 **Commands**
 
-`:Assignment {rake_command}`
+- `:Assignment {rake_command}`
+  - `:Assignment solve`で、課題に挑戦できます。
+- `:AssignmentInit {directory_path}`を使うと、初期化をVimから行うことができます。
+  - リポジトリのクローン
+  - `bundle install`の実行
+  - vimrcへ追記する設定を、クリップボードにはりつけ
 
 ### Auto complete
 

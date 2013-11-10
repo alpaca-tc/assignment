@@ -10,14 +10,14 @@ function! s:print_message(message, highlight_group) "{{{
   endfor
 endfunction"}}}
 
-function! octopress#message#error(message) "{{{
+function! assignment#message#error(message) "{{{
   call s:print_message(a:message, 'WarningMsg')
 endfunction"}}}
 
-function! octopress#message#print(message) "{{{
+function! assignment#message#print(message) "{{{
   call s:print_message(a:message, 'Comment')
 endfunction"}}}
 
-function! octopress#message#clear() "{{{
+function! assignment#message#clear() "{{{
   redraw
 endfunction"}}}

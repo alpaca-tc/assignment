@@ -33,6 +33,10 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 let g:assignment#path = get(g:, 'assignment#path', '')
+if empty(g:assignment#path)
+  call assignment#message#error('Please set g:assignment#path to assignment root path')
+  finish
+endif
 
 command! -nargs=+ -complete=customlist,assignment#complete
       \ Assignment call assignment#do(<q-args>)
